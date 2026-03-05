@@ -1,0 +1,23 @@
+zabbix_export:
+  version: '7.0'
+  template_groups:
+    - uuid: 5f0ab7f0d9c94be7b0f5f0ab7f0d9c94
+      name: Templates/Network devices
+  templates:
+    - uuid: b8e9f9c0dfd84d56a7ec3f4ff2e8ce42
+      template: Template PFSense by SNMP
+      name: Template PFSense by SNMP
+      groups:
+        - name: Templates/Network devices
+      description: |
+        Clonovaná šablona z "PFSense by SNMP".
+        Obsahuje vlastní dashboardy/grafy a tagy target=pf
+        na itemech vycházejících z BEGEMOT-PF-MIB.
+      tags:
+        - tag: target
+          value: pf
+      dashboards:
+        - name: pfSense Overview
+          pages:
+            - name: Main
+              widgets: []
